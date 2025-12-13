@@ -1,0 +1,144 @@
+{
+    // Window
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+
+    // Appearance
+    "workbench.colorTheme": "Codely Dark",
+    "workbench.iconTheme": "symbols",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.editorActionsLocation": "hidden",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.showArrays": false,
+    "breadcrumbs.showBooleans": false,
+    "breadcrumbs.showFields": false,
+    "breadcrumbs.filePath": "on",
+    "breadcrumbs.icons": true,
+    "breadcrumbs.showEnumMembers": false,
+    "breadcrumbs.showEnums": false,
+    "breadcrumbs.showClasses": false,
+    "breadcrumbs.showEvents": false,
+    "breadcrumbs.showConstants": false,
+    "breadcrumbs.showFiles": false,
+    "breadcrumbs.showFunctions": false,
+    "breadcrumbs.showNamespaces": false,
+    "breadcrumbs.showConstructors": false,
+    "breadcrumbs.showInterfaces": false,
+    "breadcrumbs.showKeys": false,
+    "breadcrumbs.showMethods": false,
+    "breadcrumbs.showModules": false,
+    "breadcrumbs.showNull": false,
+    "breadcrumbs.showNumbers": false,
+    "breadcrumbs.showObjects": false,
+    "breadcrumbs.showOperators": false,
+    "breadcrumbs.showPackages": false,
+    "breadcrumbs.showProperties": false,
+    "breadcrumbs.showStrings": false,
+    "breadcrumbs.showStructs": false,
+    "breadcrumbs.showTypeParameters": false,
+    "breadcrumbs.showVariables": false,
+    "breadcrumbs.symbolPath": "last",
+    "breadcrumbs.symbolSortOrder": "position",
+
+    // Editor
+    "editor.fontFamily": "'DankMono Nerd Font'",
+    "editor.fontSize": 23,
+    "editor.fontWeight": "500",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 2.1,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "selection",
+    "editor.bracketPairColorization.enabled": true,
+
+    // Terminal
+    "terminal.integrated.fontFamily": "DankMono Nerd Font",
+    "terminal.integrated.fontSize": 17.5,
+
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.openEditors.visible": 1,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+
+    // Workbench
+    "workbench.sideBar.location": "left",
+    "workbench.tree.indent": 20,
+    "workbench.list.horizontalScrolling": true,
+
+    // Git
+    "git.openRepositoryInParentFolders": "always",
+    "git.autofetch": true,
+
+    // GitLens
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+    // PHP
+    "php.validate.executablePath": "/home/peedrovzxf/pmmp/bin/php7/bin/php",
+
+    // Intelephense
+    "intelephense.environment.includePaths": [
+        "/home/peedrovzxf/pmmp/src"
+    ],
+    "intelephense.environment.phpVersion": "7.0.3",
+    "intelephense.stubs": [
+        "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", "ctype", "curl", "date", "dba",
+        "dom", "enchant", "exif", "FFI", "fileinfo", "filter", "fpm", "ftp", "gd", "gettext", "gmp",
+        "hash", "iconv", "imap", "intl", "json", "ldap", "libxml", "mbstring", "meta", "mysqli",
+        "oci8", "odbc", "openssl", "pcntl", "pcre", "PDO", "pgsql", "Phar", "posix", "pspell",
+        "random", "readline", "Reflection", "session", "shmop", "SimpleXML", "snmp", "soap",
+        "sockets", "sodium", "SPL", "sqlite3", "standard", "superglobals", "sysvmsg", "sysvsem",
+        "sysvshm", "tidy", "tokenizer", "xml", "xmlreader", "xmlrpc", "xmlwriter", "xsl",
+        "Zend OPcache", "zip", "zlib", "pthreads", "leveldb"
+    ],
+    "intelephense.phpdoc.classTemplate": {
+        "summary": "$1",
+        "tags": [
+            "@package ${1:$SYMBOL_NAMESPACE}"
+        ]
+    },
+
+    // Security
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // Emmet
+    "emmet.excludeLanguages": [
+        "markdown",
+        "php"
+    ],
+
+    // C/C++
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.default.systemIncludePath": [
+        "/usr/include",
+        "/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include"
+    ],
+
+    // Discord
+    "discord.removeRemoteRepository": true,
+
+    // Chat
+    "chat.commandCenter.enabled": false,
+    "editor.autoIndentOnPaste": true
+}
