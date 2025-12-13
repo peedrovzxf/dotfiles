@@ -30,6 +30,7 @@ path=(
 	"$DOTLY_PATH/bin"
 	"$DOTFILES_PATH/bin"
 	"$JAVA_HOME/bin"
+  "$HOME/.cargo/bin"
 	"/usr/local/bin"
 	"/usr/local/sbin"
 	"/bin"
