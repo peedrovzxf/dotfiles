@@ -8,4 +8,6 @@
 - link:
     ~/.dotly: os/linux/.dotly
     ~/.config/nvim: editors/nvim
-    ~/.config/Code/User: editors/code
+    ~/.config/Code/User/settings.json: editors/code/settings.json
+    ~/.config/Code/User/keybindings.json: editors/code/keybindings.json
+    ~/.config/hypr: os/linux/hypr
