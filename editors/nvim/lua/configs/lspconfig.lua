@@ -54,13 +54,6 @@ lspconfig.intelephense.setup {
   settings = {
     files = {
       maxSize = 1000000,
-    },
-    intelephense = {
-      environment = {
-        includePaths = {
-          "/home/peedrovzxf/codespace/mcpe/pmmp/src/"
-        }
-      }
     }
   }
 }

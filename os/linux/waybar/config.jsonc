@@ -1,0 +1,69 @@
+{
+    "layer": "top",
+    "position": "top",
+    "reload_style_on_change": true,
+    "modules-left": ["clock","wireplumber", "tray"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/randomwallpaper", "bluetooth", "network", "battery", "custom/power"],
+    "battery": {
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "tooltip": true,
+        "interval": 30,
+        "exec": "cat /sys/class/power_supply/BAT0/capacity"
+    },
+    "hyprland/workspaces": {
+    },
+    "custom/randomwallpaper": {
+      "format": "  󰸉",
+      "on-click": "~/.config/hypr/scripts/randwallpaper.sh && notify-send -t 1000 \"Random Wallpaper\" \"Wallpaper changed.\"",
+      "tooltip": true,
+      "tooltip-format": "Random Wallpaper"
+    },
+    "wireplumber":{
+        "format":"  {volume}%",
+        "format-muted":" Muted",
+        "tooltip":true,
+        "tooltip-format": "{volume}%",
+        "tooltip-format-muted": "{volume}%",
+        "on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "custom/power": {
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Shutdown",
+        "on-click":"shutdown -h now"
+    },
+    "clock": {
+        "format": " {:%I:%M:%S %p}",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "{:%A, %d de %B de %Y}"
+    },
+    "network": {
+      "format-wifi": " ",
+      "format-ethernet":"",
+      "format-disconnected": "  Disconnected",
+      "tooltip-format-disconnected": "  Error",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ifname}",
+      "on-click": "kitty nmtui"
+    },
+    "bluetooth": {
+      "format-on": " 󰂯 ",
+      "format-off": "BT Off",
+      "format-disabled": "󰂲 ",
+      "format-connected-battery": "{device_battery_percentage}% 󰂯",
+      "format-alt": "{device_alias} 󰂯",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+      "on-click-right": "blueman-manager" 
+    },
+    "tray": {
+      "icon-size": 14,
+      "spacing": 10
+    }
+}

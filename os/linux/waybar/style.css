@@ -1,0 +1,129 @@
+@import url('/home/peedrovzxf/.cache/wal/colors-waybar.css');
+@define-color background transparent;
+
+
+* {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: JetBrains Mono Nerd Font;
+    color: @color0;
+}
+
+window#waybar {
+    all: unset;
+    background-color: @background;
+    color: @color0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin-top: 0px;
+    margin-bottom: -5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: none;
+    padding: 10px;
+}
+
+.modules-center {
+    min-width: 150.5px;
+}
+
+tooltip {
+    color: @color8;
+    background-color: @color7;
+}
+
+#clock:hover,
+#wireplumber:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#custom-power:hover,
+#custom-randomwallpaper:hover {
+    transition: all 0.3s ease;
+    color: @color0;
+}
+
+#workspaces {
+    padding: 0px 5px;
+}
+
+#workspaces button {
+    all: unset;
+    margin: 0px 6px;
+    padding: 0px 4px;
+    background: @color7;
+    border-radius: 50%;
+    transition: all 0.3s;
+    min-width: 15px;
+}
+
+#workspaces button.active {
+    border: none;
+    border-radius: 10px;
+    background: @color0;
+    min-width: 30px;
+}
+
+#workspaces button:hover label,
+#workspaces button.active label {
+    color: @color7;
+}
+
+#group-expand {
+    padding: 0px 5px;
+    transition: all 0.3s ease;
+}
+
+#battery {
+    color: @color0;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#battery:hover {
+    color: @color7;
+}
+
+#custom-expand {
+    padding: 0px 5px;
+    color: @color0;
+    transition: all 0.3s ease;
+}
+
+#custom-expand:hover {
+    color: @color7;
+}
+
+#clock,
+#wireplumber,
+#bluetooth,
+#network,
+#custom-power,
+#custom-randomwallpaper {
+    padding: 0px 5px;
+    color: @color0;
+    transition: all 0.3s ease;
+}
+
+#custom-endpoint {
+    color: @color0;
+}
+
+#tray{
+    padding: 0px 5px;
+    transition: all .3s ease; 
+
+}
+#tray menu * {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+
+#tray menu separator {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}

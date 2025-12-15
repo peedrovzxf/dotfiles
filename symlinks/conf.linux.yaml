@@ -11,3 +11,9 @@
     ~/.config/Code/User/settings.json: editors/code/settings.json
     ~/.config/Code/User/keybindings.json: editors/code/keybindings.json
     ~/.config/hypr: os/linux/hypr
+    ~/.config/mako: os/linux/mako
+    ~/.config/wofi: os/linux/wofi
+    ~/.config/waybar: os/linux/waybar
+    ~/.config/swaylock: os/linux/swaylock
+    ~/.config/ranger: os/linux/ranger
+    ~/.config/kitty: os/linux/kitty

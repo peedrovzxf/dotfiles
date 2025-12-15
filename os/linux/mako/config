@@ -1,0 +1,23 @@
+font=Iosevka SS14
+icons=1
+text-alignment=left
+default-timeout=5000
+anchor=bottom-right
+icon-location=left
+width=350
+text-color=#CCCAC2
+background-color=#161616
+max-visible=3
+
+[mode=dnd]
+invisible=1
+
+[urgency=high]
+border-color=#F26D78
+default-timeout=0
+
+[urgency=low]
+border-color=#282828
+
+[urgency=normal]
+border-color=#282828
