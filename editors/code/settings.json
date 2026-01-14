@@ -140,5 +140,6 @@
 
     // Chat
     "chat.commandCenter.enabled": false,
-    "editor.autoIndentOnPaste": true
+    "editor.autoIndentOnPaste": true,
+    "codeium.enableCodeLens": false
 }

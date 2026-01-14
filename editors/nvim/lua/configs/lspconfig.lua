@@ -55,6 +55,13 @@ lspconfig.intelephense.setup {
     files = {
       maxSize = 1000000,
     }
+  },
+  intelephense = {
+    environment = {
+      includePaths = {
+        "/home/peedrovzxf/pmmp/src/"
+      }
+    }
   }
 }
 -- configuring single server, example: typescript
