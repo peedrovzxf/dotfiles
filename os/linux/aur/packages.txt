@@ -25,10 +25,7 @@ minecraft-launcher-debug
 notion-app-electron
 notion-app-electron-debug
 python-pywal16
-qt5-webchannel
-qt5-webengine
 sklauncher-bin
-spotify
 swaylock-effects
 swaylock-effects-debug
 ttf-ms-fonts
@@ -39,5 +36,5 @@ visual-studio-code-bin
 visual-studio-code-bin-debug
 wlogout
 wlogout-debug
-yay-git
-yay-git-debug
+yay
+yay-debug

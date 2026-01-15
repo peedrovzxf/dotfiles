@@ -92,14 +92,13 @@ python-requests
 qt5-declarative
 qt5-quickcontrols
 qt5-quickcontrols2
-qt5-webengine
 ranger
 reflector
 ripgrep
 rustup
+scanmem
 sklauncher-bin
 slurp
-spotify
 sqlitebrowser
 starship
 steam
@@ -135,7 +134,8 @@ xdg-desktop-portal-wlr
 xf86-input-evdev
 xfce4-settings
 xorg-xrandr
-yay-git
+yay
+yay-debug
 yt-dlp
 zip
 zram-generator

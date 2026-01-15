@@ -3,6 +3,7 @@ apvarun.celestial
 beardedbear.beardedicons
 beardedbear.beardedtheme
 bmewburn.vscode-intelephense-client
+codeium.codeium
 codely.codely-theme
 eamodio.gitlens
 editorconfig.editorconfig
