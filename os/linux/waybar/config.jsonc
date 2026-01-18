@@ -2,9 +2,17 @@
     "layer": "top",
     "position": "top",
     "reload_style_on_change": true,
-    "modules-left": ["clock","wireplumber", "tray"],
+    "modules-left": ["clock","wireplumber", "keyboard-state", "tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["custom/randomwallpaper", "bluetooth", "network", "battery", "custom/power"],
+    "keyboard-state": {
+      "capslock": true,
+      "format": " {name} {icon}",
+      "format-icons": {
+        "locked": " ",
+        "unlocked": " "
+      }
+    },
     "battery": {
         "format": "{capacity}% ",
         "format-charging": "{capacity}% ",
