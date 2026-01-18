@@ -53,7 +53,7 @@
       "format-wifi": " ",
       "format-ethernet":"",
       "format-disconnected": "  Disconnected",
-      "tooltip-format-disconnected": "  Error",
+      "tooltip-format-disconnected": " Error",
       "tooltip-format-wifi": "{essid} ({signalStrength}%)",
       "tooltip-format-ethernet": "{ifname}",
       "on-click": "kitty nmtui"
