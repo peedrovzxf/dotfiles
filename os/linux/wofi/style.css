@@ -1,4 +1,22 @@
-@import url('/home/peedrovzxf/.cache/wal/colors-waybar.css');
+@define-color foreground #c0bfc4;
+@define-color cursor #c0bfc4;
+
+@define-color color0 #030215;
+@define-color color1 #553B88;
+@define-color color2 #354994;
+@define-color color3 #60549D;
+@define-color color4 #9E6495;
+@define-color color5 #CB7191;
+@define-color color6 #6295C4;
+@define-color color7 #c0bfc4;
+@define-color color8 #575669;
+@define-color color9 #553B88;
+@define-color color10 #354994;
+@define-color color11 #60549D;
+@define-color color12 #9E6495;
+@define-color color13 #CB7191;
+@define-color color14 #6295C4;
+@define-color color15 #c0bfc4;
 
 * {
   font-weight: bold;
