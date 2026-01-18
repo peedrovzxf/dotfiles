@@ -25,7 +25,7 @@
     },
     "custom/randomwallpaper": {
       "format": "  󰸉",
-      "on-click": "~/.config/hypr/scripts/randwallpaper.sh && notify-send -t 1000 \"Random Wallpaper\" \"Wallpaper changed.\"",
+      "on-click": "~/.config/waybar/scripts/change-wallpaper.sh",
       "tooltip": true,
       "tooltip-format": "Random Wallpaper"
     },
