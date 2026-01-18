@@ -17,3 +17,4 @@
     ~/.config/swaylock: os/linux/swaylock
     ~/.config/ranger: os/linux/ranger
     ~/.config/kitty: os/linux/kitty
+    ~/.config/Thunar: os/linux/thunar
