@@ -51,6 +51,7 @@ jdk8-openjdk
 jq
 keepassxc
 kitty
+less
 lib32-curl
 lib32-libevdev
 lib32-libpng
@@ -97,6 +98,7 @@ reflector
 ripgrep
 rustup
 scanmem
+shfmt
 sklauncher-bin
 slurp
 sqlitebrowser
@@ -119,6 +121,7 @@ unzip
 vesktop-bin
 visual-studio-code-bin
 vlc
+vlc-plugin-ffmpeg
 vlc-plugin-fluidsynth
 vlc-plugin-jack
 waybar

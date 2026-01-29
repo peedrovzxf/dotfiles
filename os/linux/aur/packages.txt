@@ -8,6 +8,8 @@ electron-castlab-bin-debug
 electron33
 electron37-bin
 electron37-bin-debug
+electron40-bin
+electron40-bin-debug
 gnu-netcat
 gtk2
 lib32-check
