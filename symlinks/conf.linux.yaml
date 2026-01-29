@@ -18,3 +18,4 @@
     ~/.config/ranger: os/linux/ranger
     ~/.config/kitty: os/linux/kitty
     ~/.config/Thunar: os/linux/thunar
+    ~/.tmux.conf: os/linux/tmux/tmux.conf
