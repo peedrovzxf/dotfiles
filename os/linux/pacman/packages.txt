@@ -73,7 +73,6 @@ mupdf
 neovim
 networkmanager
 nmap
-notion-app-electron
 noto-fonts-cjk
 noto-fonts-emoji
 obs-studio
