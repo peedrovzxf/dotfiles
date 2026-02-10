@@ -42,28 +42,6 @@ require("neocord").setup({
     terminal_text       = "Using Terminal",           -- Format string rendered when in terminal mode.
 })
 
-lspconfig.intelephense.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  cmd = { "intelephense", "--stdio" },
-  filetypes = { 'php' };
-      root_dir = function(fname)
-        return vim.loop.cwd()
-      end;
-  settings = {
-    files = {
-      maxSize = 1000000,
-    }
-  },
-  intelephense = {
-    environment = {
-      includePaths = {
-        "/home/peedrovzxf/pmmp/src/"
-      }
-    }
-  }
-}
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,
