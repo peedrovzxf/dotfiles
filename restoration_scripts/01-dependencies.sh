@@ -62,3 +62,4 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 fi
 
 echo -e "Dependencies have been installed.\n"
+exit 0
