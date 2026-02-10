@@ -20,7 +20,7 @@ EOF
     sleep 3
 fi
 
-yay -S --noconfirm hyprland kitty waybar \
+yay -S --needed --noconfirm hyprland kitty waybar \
 swaybg swaylock-effects wofi wlogout mako thunar \
 ttf-jetbrains-mono-nerd noto-fonts-emoji \
 polkit-gnome python-requests starship \
