@@ -5,6 +5,7 @@
   "modules-left": [
     "clock",
     "wireplumber",
+    "custom/checkupdates",
     "tray"
   ],
   "modules-center": [
@@ -17,6 +18,11 @@
     "battery",
     "custom/power",
   ],
+  "custom/checkupdates": {
+    "format": "󰚰\n{text}",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 3600
+  },
   "battery": {
     "format": " {icon}\n{capacity}%",
     "format-icons": [
@@ -56,7 +62,7 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
   },
   "custom/power": {
-    "format": "",
+    "format": "󰤆",
     "tooltip": true,
     "tooltip-format": "Shutdown",
     "on-click": "shutdown -h now",

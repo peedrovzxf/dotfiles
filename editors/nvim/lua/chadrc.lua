@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "tokyodark",
+	theme = "chadtain",
   transparency = false
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -22,10 +22,10 @@ M.ui = {
   },
   statusline = {
     enabled = true,
-    theme = "minimal"
+    theme = "vscode"
   },
   telescope = {
-    style = "borderless"
+    style = "bordered"
   }
 }
 
