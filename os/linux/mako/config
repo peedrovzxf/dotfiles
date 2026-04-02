@@ -1,23 +1,24 @@
-font=Iosevka SS14
+font=Lilex 10
 icons=1
-text-alignment=left
 default-timeout=5000
 anchor=bottom-right
 icon-location=left
-width=350
-text-color=#CCCAC2
-background-color=#161616
+width=300
+text-color=#FFFFFF
+background-color=#000000
 max-visible=3
+border-size=1
+border-radius=5
 
 [mode=dnd]
 invisible=1
 
 [urgency=high]
-border-color=#F26D78
+border-color=#DC143C
 default-timeout=0
 
 [urgency=low]
-border-color=#282828
+border-color=#818589
 
 [urgency=normal]
-border-color=#282828
+border-color=#818589

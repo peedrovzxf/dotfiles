@@ -31,6 +31,7 @@ path=(
 	"$DOTFILES_PATH/bin"
 	"$JAVA_HOME/bin"
   "$HOME/.cargo/bin"
+  "$HOME/Android/Sdk/platform-tools"
 	"/usr/local/bin"
 	"/usr/local/sbin"
 	"/bin"

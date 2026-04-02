@@ -1,55 +1,55 @@
-@define-color background transparent;
-@define-color foreground #3F403B;
-@define-color cursor     #3F403B;
-
-@define-color color0  #FCFDEA;
-@define-color color1  #AAC477;
-@define-color color2  #CAB66B;
-@define-color color3  #9FAB62;
-@define-color color4  #619B6A;
-@define-color color5  #348E6E;
-@define-color color6  #9D6A3B;
-@define-color color7  #3F403B;
-@define-color color8  #A8A996;
-@define-color color9  #AAC477;
-@define-color color10 #CAB66B;
-@define-color color11 #9FAB62;
-@define-color color12 #619B6A;
-@define-color color13 #348E6E;
-@define-color color14 #9D6A3B;
-@define-color color15 #3F403B;
-
 * {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: JetBrains Mono Nerd Font;
-    color: @color0;
+    font-size: 12px;
+    font-family: "Aporetic Sans Mono";
+    color: white;
+    font-weight: 100;
 }
 
 window#waybar {
     all: unset;
-    background-color: @background;
-    color: @color0;
+    background-color: transparent;
+    color: white;
+    min-width: 0px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    margin-top: 0px;
-    margin-bottom: -5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
     border: none;
-    padding: 10px;
+    padding: 5px 0px;
+    min-width: 0px;
 }
 
 .modules-center {
-    min-width: 150.5px;
+    min-height: unset;
+    min-width: unset;
 }
 
 tooltip {
-    color: @color8;
-    background-color: @color7;
+    all: unset;
+}
+
+tooltip>box {
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25);
+
+    padding: 6px 8px;
+}
+
+tooltip label {
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: "Aporetic Sans Mono";
 }
 
 #clock:hover,
@@ -57,90 +57,96 @@ tooltip {
 #bluetooth:hover,
 #network:hover,
 #battery:hover,
-#custom-power:hover,
 #custom-randomwallpaper:hover {
     transition: all 0.3s ease;
-    color: @color0;
+    color: white;
 }
 
 #workspaces {
-    padding: 0px 5px;
+    padding: 5px 0px;
 }
 
 #workspaces button {
     all: unset;
-    margin: 0px 6px;
-    padding: 0px 4px;
-    background: @color7;
-    border-radius: 50%;
+    margin: 6px 0px;
+    padding: 4px;
+    background: black;
+    border-radius: 10px;
     transition: all 0.3s;
-    min-width: 15px;
 }
 
 #workspaces button.active {
     border: none;
     border-radius: 10px;
-    background: @color0;
-    min-width: 30px;
+    background: white;
+    padding: 10px 4px;
 }
 
 #workspaces button:hover label,
 #workspaces button.active label {
-    color: @color7;
+    color: black;
 }
 
 #group-expand {
-    padding: 0px 5px;
+    padding: 5px 0px;
     transition: all 0.3s ease;
 }
 
 #battery {
-    color: @color0;
-    padding: 0 10px;
-    font-weight: bold;
+    padding: 10px 0;
     transition: all 0.3s ease-in-out;
 }
 
-#battery:hover {
-    color: @color7;
-}
-
 #custom-expand {
-    padding: 0px 5px;
-    color: @color0;
+    padding: 5px 0px;
+    color: white;
     transition: all 0.3s ease;
 }
 
 #custom-expand:hover {
-    color: @color7;
+    color: black;
 }
 
 #clock,
 #wireplumber,
 #bluetooth,
 #network,
-#custom-power,
 #custom-randomwallpaper {
-    padding: 0px 5px;
-    color: @color0;
+    padding: 5px 0px;
+    color: white;
     transition: all 0.3s ease;
 }
 
+#custom-power {
+    color: crimson
+}
+
 #custom-endpoint {
-    color: @color0;
+    color: white;
 }
 
-#tray{
-    padding: 0px 5px;
-    transition: all .3s ease; 
-
+#tray {
+    padding: 5px 0px;
+    transition: all .3s ease;
 }
+
+#tray menu {
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25);
+}
+
 #tray menu * {
-    padding: 0px 5px;
-    transition: all .3s ease; 
+    padding: 5px 0px;
+    transition: all .3s ease;
+    color: white;
 }
 
 #tray menu separator {
-    padding: 0px 5px;
-    transition: all .3s ease; 
+    padding: 5px 0px;
+    transition: all .3s ease;
 }
