@@ -18,7 +18,7 @@ fi
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
 
-swww img -t any "$WALLPAPER" &
+awww img -t any "$WALLPAPER" &
 
 rm "$WAYBAR_DIR/style.css"
 cp "$WAYBAR_DIR/styles/$MODE-style.css" "$WAYBAR_DIR/style.css"

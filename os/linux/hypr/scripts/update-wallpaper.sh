@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-STATE_FILE="/tmp/swww_pause_state"
+STATE_FILE="/tmp/awww_pause_state"
 PAUSE_CMD="/home/peedrovzxf/.dotfiles/os/linux/waybar/scripts/change-wallpaper-static.sh"
 RESUME_CMD="/home/peedrovzxf/.dotfiles/os/linux/waybar/scripts/change-wallpaper-animated.sh"
 current_state() {
