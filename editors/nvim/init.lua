@@ -3,9 +3,9 @@ require("plugins")
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
-vim.opt.softtabstop = 2  
-vim.opt.shiftwidth = 2   
-vim.opt.expandtab = true 
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 vim.opt.clipboard:append("unnamedplus")
 
 vim.g.mapleader = " "
@@ -17,3 +17,4 @@ vim.g.netrw_localcopydircmd = "cp -r"
 vim.g.netrw_liststyle = 3
 
 require("mappings")
+require("lsp")
