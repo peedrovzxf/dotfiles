@@ -1,101 +1,46 @@
 {
-  "layer": "left",
-  "position": "left",
-  "reload_style_on_change": true,
-  "modules-left": [
-    "clock",
-    "wireplumber",
-    "custom/checkupdates",
-    "tray"
-  ],
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
-    "custom/randomwallpaper",
-    "bluetooth",
-    "network",
-    "battery",
-    "custom/power",
-  ],
-  "custom/checkupdates": {
-    "format": "󰚰\n{text}",
-    "exec": "~/.config/waybar/scripts/updates.sh",
-    "interval": 3600
-  },
+  "layer": "top",
+  "position": "bottom",
+  "height": 24,
+  "margin-bottom": 0,
+  "spacing": 0,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
+
   "battery": {
-    "format": " {icon}\n{capacity}%",
-    "format-icons": [
-      "󱊡",
-      "󱊡",
-      "󱊢",
-      "󱊣",
-      "󱊣"
-    ],
-    "format-charging": " \n{capacity}%",
-    "format-plugged": " \n{capacity}%",
-    "tooltip": true,
-    "interval": 30,
-    "exec": "cat /sys/class/power_supply/BAT0/capacity",
-  },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-    },
-  },
-  "custom/randomwallpaper": {
-    "format": "󰸉",
-    "on-click": "~/.dotfiles/os/linux/waybar/scripts/update-current-wallpaper.sh",
-    "tooltip": true,
-    "tooltip-format": "Random Wallpaper",
-  },
-  "wireplumber": {
-    "format": " 󰕾\n{volume}%",
-    "format-muted": "󰝟",
-    "tooltip": true,
-    "tooltip-format": "{volume}%",
-    "tooltip-format-muted": "{volume}%",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-  },
-  "custom/power": {
-    "format": "󰤆",
-    "tooltip": true,
-    "tooltip-format": "Shutdown",
-    "on-click": "shutdown -h now",
-  },
-  "clock": {
-    "format": " \n{:%I\n%M\n%p}",
-    "interval": 30,
-    "tooltip": true,
-    "tooltip-format": "{:%A, %d de %B de %Y}",
-  },
-  "network": {
-    "format-wifi": " ",
-    "format-ethernet": "",
-    "format-disconnected": "  Disconnected",
-    "tooltip-format-disconnected": " Error",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname}",
-    "on-click": "kitty nmtui",
-  },
-  "bluetooth": {
-    "format-on": "󰂯",
-    "format-off": "BT Off",
-    "format-disabled": "󰂲",
-    "format-connected-battery": "{device_battery_percentage}% 󰂯",
-    "format-alt": "{device_alias} 󰂯",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-    "on-click-right": "blueman-manager",
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%+",
+    "format-full": "full",
+    "tooltip": false
   },
   "tray": {
-    "icon-size": 14,
-    "spacing": 10,
+    "spacing": 6,
+    "icon-size": 12
   },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  "network": {
+    "format-wifi": "{bandwidthDownBytes}",
+    "format-ethernet": "{bandwidthDownBytes}",
+    "format-disconnected": "offline",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "{essid} ({signalStrength}%) {ipaddr}\n   {bandwidthUpBytes} |    {bandwidthDownBytes}"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-muted": "muted",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": false
+  }
 }
