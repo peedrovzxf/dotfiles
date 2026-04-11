@@ -27,3 +27,29 @@ prompt ${DOTLY_THEME:-codely}
 source "$DOTLY_PATH/shell/zsh/bindings/dot.zsh"
 source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
+
+# pnpm
+export PNPM_HOME="/home/peedrovzxf/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+
+nv() {
+  local file="${1:-.}"
+  tmux send-keys -t main:neovim ":e $(realpath "$file")" Enter
+  tmux select-window -t main:neovim
+}
+
+if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ] && [ -z "$TMUX" ]; then
+  SESSION="main"
+  if tmux has-session -t "$SESSION" 2>/dev/null; then
+    tmux attach-session -t "$SESSION"
+  else
+    tmux new-session -d -s "$SESSION" -n "neovim" "nvim"
+    tmux new-window -t "$SESSION:" -n "term"
+    tmux attach-session -t "$SESSION"
+  fi
+fi

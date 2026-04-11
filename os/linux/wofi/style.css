@@ -1,114 +1,75 @@
-@define-color foreground #c0bfc4;
-@define-color cursor #c0bfc4;
-
-@define-color color0 #030215;
-@define-color color1 #553B88;
-@define-color color2 #354994;
-@define-color color3 #60549D;
-@define-color color4 #9E6495;
-@define-color color5 #CB7191;
-@define-color color6 #6295C4;
-@define-color color7 #c0bfc4;
-@define-color color8 #575669;
-@define-color color9 #553B88;
-@define-color color10 #354994;
-@define-color color11 #60549D;
-@define-color color12 #9E6495;
-@define-color color13 #CB7191;
-@define-color color14 #6295C4;
-@define-color color15 #c0bfc4;
-
 * {
-  font-weight: bold;
-  font-family: JetBrains Mono Nerd Font;
+  font-family: "JetBrains Mono", "Monospace", monospace;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/* Global styles */
-#window {
-  margin: 0px;
-  border: 4px solid @color8;
-  background-color: @color7;
-  color: @color0;
+window {
+  background-color: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 10px;
 }
 
-/* Input box */
 #input {
-  margin: 5px;
-  border: 1px solid @color0;
-  color: @color0;
-  background-color: @color7;
-  padding: 6px;
-  border-radius: 5px;
-}
-
-#input::placeholder {
-  color: @color0;
+  background-color: transparent;
+  color: #e0e0e0;
+  border: none;
+  border-bottom: 1px solid #222;
+  border-radius: 0;
+  padding: 14px 16px;
+  margin: 0;
+  caret-color: #606060;
 }
 
 #input:focus {
-  color: @color0;
+  border-bottom: 1px solid #444;
 }
 
-#input prompt {
-  color: @color0;
+#input::placeholder {
+  color: #333;
 }
 
-#input image {
-  color: @color7;
-}
-
-#prompt {
-  color: @color0;
-}
-
-/* Inner box */
-#inner-box {
-  margin: 5px;
-  border: none;
-  color: @color0;
-  padding: 0px;
-}
-
-/* Outer box */
-#outer-box {
-  margin: 5px;
-  border: none;
-  padding: 5px;
-}
-
-/* Scroll area */
 #scroll {
-  margin: 0px;
+  margin: 6px 0;
 }
 
-/* Text styling */
-#text {
-  margin: 5px;
-  border: none;
-  color: @color0;
-  font-size: 14px;
+#inner-box {
+  background-color: transparent;
 }
 
-#entry.activatable #text {
-  color: @color0;
+#outer-box {
+  background-color: transparent;
 }
 
-#entry > * {
-  color: @color8;
+#entry {
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin: 2px 8px;
+  transition: background-color 80ms ease;
+  color: #888;
 }
 
-/* Active entry */
 #entry:selected {
-  border: 5px solid @color8;
-  border-radius: 5;
-  background-color: @color8;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
-#entry:selected #text {
-  color: @color0;
+#entry:hover {
+  background-color: #151515;
 }
 
-#entry:hover #text {
-  color: @color8;
+#text {
+  color: inherit;
+  margin-left: 8px;
 }
 
+#img {
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+#entry:selected #img {
+  opacity: 1;
+}

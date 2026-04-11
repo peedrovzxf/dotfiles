@@ -26,6 +26,19 @@ vim.lsp.config("clangd", {
 
 vim.lsp.enable("clangd")
 
+vim.lsp.config("pyright", {
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "setup.py", "requirements.txt", ".git", ".venv" },
+  settings = {
+    python = {
+      analysis = { autoSearchPaths = true, useLibraryCodeForTypes = true }
+    }
+  }
+})
+
+vim.lsp.enable("pyright")
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function ()
