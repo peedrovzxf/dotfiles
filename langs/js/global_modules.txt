@@ -1,5 +1,3 @@
-@electron
 node-gyp
 nopt
-pino-pretty
 semver
