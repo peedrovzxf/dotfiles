@@ -19,7 +19,13 @@ ZSH_HIGHLIGHT_MAXLENGTH=300
 
 source "$DOTFILES_PATH/shell/init.sh"
 
-fpath=("$DOTFILES_PATH/shell/zsh/themes" "$DOTFILES_PATH/shell/zsh/completions" "$DOTLY_PATH/shell/zsh/themes" "$DOTLY_PATH/shell/zsh/completions" $fpath)
+fpath=(
+    "$DOTFILES_PATH/shell/zsh/themes"
+    "$DOTFILES_PATH/shell/zsh/completions"
+    "$DOTLY_PATH/shell/zsh/themes"
+    "$DOTLY_PATH/shell/zsh/completions"
+    $fpath
+)
 
 autoload -Uz promptinit && promptinit
 prompt ${DOTLY_THEME:-codely}
@@ -39,7 +45,9 @@ esac
 
 nv() {
   local file="${1:-.}"
-  tmux send-keys -t main:neovim ":e $(realpath "$file")" Enter
+  tmux kill-window -t main:neovim 2>/dev/null
+  tmux new-window -t main: -n "neovim" "nvim $(realpath "$file")"
+  tmux move-window -t main:neovim -t main:0
   tmux select-window -t main:neovim
 }
 
