@@ -13,6 +13,15 @@ vim.lsp.config("lua_ls", {
 })
 vim.lsp.enable("lua_ls")
 
+vim.lsp.config("serve-d", {
+    cmd = { 'serve-d' },
+    filetypes = { 'd' },
+    root_markers = {
+        'dub.json'
+    }
+})
+vim.lsp.enable("serve-d")
+
 vim.lsp.config("clangd", {
     cmd = {
         'clangd',
@@ -65,7 +74,8 @@ vim.lsp.config("intelephense", {
             },
             environment = {
                 includePaths = { "/home/peedrovzxf/dev/pm-dev/server/src/" },
-                phpVersion = "7.0.3"
+                executablePath = "/home/peedrovzxf/dev/pm-dev/server/bin/php7/bin/php-bin",
+                phpVersion = "8.2.0"
             },
             stubs = {
                 "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", "ctype", "curl", "date",
@@ -77,7 +87,7 @@ vim.lsp.config("intelephense", {
                 "sockets", "sodium", "SPL", "sqlite3", "standard", "superglobals", "sysvmsg", "sysvsem", "sysvshm",
                 "tidy",
                 "tokenizer", "xml", "xmlreader", "xmlrpc", "xmlwriter", "xsl", "Zend OPcache", "zip", "zlib",
-                "wordpress", "phpunit",
+                "wordpress", "phpunit", "yaml"
             },
             diagnostics = {
                 enable = true,
@@ -141,5 +151,19 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     callback = function(args)
         vim.lsp.buf.format({ bufnr = args.buf, async = false })
         require("fidget").notify("Formatting file.")
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        pcall(vim.treesitter.start)
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "php",
+    callback = function()
+        vim.opt_local.autoindent = true
     end,
 })

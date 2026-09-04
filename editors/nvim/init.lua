@@ -2,7 +2,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 require("plugins")
+require("snippets.index")
 
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.guicursor = "n-v-i-c:block"
 vim.opt.relativenumber = true
@@ -24,27 +27,27 @@ vim.g.netrw_liststyle = 3
 vim.opt.termguicolors = true
 vim.cmd("colorscheme tokyodark")
 
-require('telescope').setup{
-  pickers = {
-    colorscheme = {
-      enable_preview = true,
+require('telescope').setup {
+    pickers = {
+        colorscheme = {
+            enable_preview = true,
+        },
     },
-  },
 }
 
 require("fidget").setup({
-  progress = {
-    display = {
-      done_icon = "✔",
-      progress_icon = { pattern = "dots", period = 1 },
+    progress = {
+        display = {
+            done_icon = "✔",
+            progress_icon = { pattern = "dots", period = 1 },
+        },
     },
-  },
-  notification = {
-    window = {
-      winblend = 0,
-      border = "none",
+    notification = {
+        window = {
+            winblend = 0,
+            border = "none",
+        },
     },
-  },
 })
 
 require("colorizer").setup()

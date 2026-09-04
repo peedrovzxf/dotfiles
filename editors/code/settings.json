@@ -97,13 +97,13 @@
     "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
     // PHP
-    "php.validate.executablePath": "/home/peedrovzxf/pmmp/bin/php7/bin/php",
+    "php.validate.executablePath": "/home/peedrovzxf/dev/pm-dev/server/bin/php7/bin/php",
 
     // Intelephense
     "intelephense.environment.includePaths": [
-        "/home/peedrovzxf/pmmp/src"
+        "/home/peedrovzxf/dev/pm-dev/server/src"
     ],
-    "intelephense.environment.phpVersion": "7.0.3",
+    "intelephense.environment.phpVersion": "8.2.0",
     "intelephense.stubs": [
         "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", "ctype", "curl", "date", "dba",
         "dom", "enchant", "exif", "FFI", "fileinfo", "filter", "fpm", "ftp", "gd", "gettext", "gmp",
