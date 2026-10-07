@@ -88,64 +88,64 @@ hl.monitor({
 
 --
 
-hl.window_rule({
-    name             = "fl-all-float",
-    match            = {
-        class = "^(fl64.exe)$",
-    },
-    float            = true,
-    no_initial_focus = true,
-})
-
-hl.window_rule({
-    name             = "fl-tooltip-1",
-    match            = {
-        class = "^(fl64.exe)$",
-        title = "^tooltip$",
-    },
-    float            = true,
-    no_initial_focus = true,
-})
-
-hl.window_rule({
-    name             = "fl-confirm",
-    match            = {
-        class = "^(fl64.exe)$",
-        title = "^Confirm$",
-    },
-    float            = true,
-    no_initial_focus = true,
-})
-
-hl.window_rule({
-    name             = "fl-subwindow-1",
-    match            = {
-        class = "^(fl64.exe)$",
-        title = "^$",
-    },
-    float            = true,
-    no_initial_focus = true,
-})
-
-hl.window_rule({
-    name             = "fl-subwindow-bg",
-    match            = {
-        class = "^(fl64.exe)$",
-        title = "^$",
-    },
-    float            = true,
-    no_initial_focus = true,
-    workspace        = "special:fl-bg silent",
-})
-
-hl.window_rule({
-    name  = "fl-main",
-    match = {
-        class = "^(fl64.exe)$",
-        title = "^(FL Studio 2025)$",
-    },
-    float = false,
-})
+-- hl.window_rule({
+--     name             = "fl-all-float",
+--     match            = {
+--         class = "^(fl64.exe)$",
+--     },
+--     float            = true,
+--     no_initial_focus = true,
+-- })
+--
+-- hl.window_rule({
+--     name             = "fl-tooltip-1",
+--     match            = {
+--         class = "^(fl64.exe)$",
+--         title = "^tooltip$",
+--     },
+--     float            = true,
+--     no_initial_focus = true,
+-- })
+--
+-- hl.window_rule({
+--     name             = "fl-confirm",
+--     match            = {
+--         class = "^(fl64.exe)$",
+--         title = "^Confirm$",
+--     },
+--     float            = true,
+--     no_initial_focus = true,
+-- })
+--
+-- hl.window_rule({
+--     name             = "fl-subwindow-1",
+--     match            = {
+--         class = "^(fl64.exe)$",
+--         title = "^$",
+--     },
+--     float            = true,
+--     no_initial_focus = true,
+-- })
+--
+-- hl.window_rule({
+--     name             = "fl-subwindow-bg",
+--     match            = {
+--         class = "^(fl64.exe)$",
+--         title = "^$",
+--     },
+--     float            = true,
+--     no_initial_focus = true,
+--     workspace        = "special:fl-bg silent",
+-- })
+--
+-- hl.window_rule({
+--     name  = "fl-main",
+--     match = {
+--         class = "^(fl64.exe)$",
+--         title = "^(FL Studio 2025)$",
+--     },
+--     float = false,
+-- })
 
 -- Autostart
 hl.on("hyprland.start", function()

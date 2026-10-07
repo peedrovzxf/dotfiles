@@ -81,3 +81,9 @@ export PATH="/home/peedrovzxf/.local/bin:$PATH"
 export PATH=/home/peedrovzxf/.opencode/bin:$PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin
+
+audio2() {
+  bluetoothctl connect 45:01:71:9D:CC:7B >/dev/null
+  for i in $(seq 1 15); do c=$(pactl list short cards | awk '/bluez_card/{print $2}'); [ -n "$c" ] && break; sleep 1; done
+  pactl set-card-profile "$c" a2dp-sink && sleep 2 && pactl set-default-sink combinado && pactl list short sinks
+}

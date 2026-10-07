@@ -73,9 +73,8 @@ vim.lsp.config("intelephense", {
                 max_size = 1000000,
             },
             environment = {
-                includePaths = { "/home/peedrovzxf/dev/pm-dev/server/src/" },
-                executablePath = "/home/peedrovzxf/dev/pm-dev/server/bin/php7/bin/php-bin",
-                phpVersion = "8.2.0"
+                includePaths = { "/home/peedrovzxf/dev/infinity-src" },
+                phpVersion = "8.4.0"
             },
             stubs = {
                 "apache", "bcmath", "bz2", "calendar", "com_dotnet", "Core", "ctype", "curl", "date",
