@@ -11,7 +11,7 @@ hl.config({
         kb_layout = "latam",
         follow_mouse = 0,
         accel_profile = "flat",
-        -- force_no_accel = true
+        -- force_no_accel = true,
         touchpad = {
             disable_while_typing = false,
             natural_scroll = true,
