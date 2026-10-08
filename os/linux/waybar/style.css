@@ -1,0 +1,78 @@
+* {
+    font-family: "SFProDisplay Nerd Font";
+    font-size: 22px;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    border-radius: 25%;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #ffffff;
+    padding: 0 10px;
+    min-width: 0;
+}
+
+#workspaces button.active {
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 5px red;
+}
+
+#workspaces button:hover {
+    color: #666666;
+}
+
+.modules-right {
+    margin-right: 10px;
+}
+
+#info {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 18px;
+}
+
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#clock:hover {
+    color: #666666;
+}
+
+#network,
+#pulseaudio,
+#clock,
+#battery
+{
+    padding: 0 10px;
+    color: #ffffff;
+    background: transparent;
+    transition: color 0.5s ease;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 0 5px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 25%;   
+
+}
+
+#clock {
+    letter-spacing: 0.075em;
+}
+
+#pulseaudio.muted {
+    color: #444444;
+}

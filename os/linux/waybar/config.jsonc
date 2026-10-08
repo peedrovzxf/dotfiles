@@ -1,47 +1,66 @@
 {
-  "output": ["*"],
-  "layer": "top",
-  "position": "bottom",
-  "height": 36,
-  "margin-bottom": 0,
-  "spacing": 0,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
+    "output": ["*"],
+    "layer": "top",
+    "position": "bottom",
+    "height": 36,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+    "spacing": 0,
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "group/info"],
+    "group/info": {
+        "orientation": "horizontal",
+        "modules": ["battery", "network", "pulseaudio", "clock"]
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "spacing": 6,
+        "icon-size": 18
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "sort-by-number": true,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "8": "󰊗"
+        }
+    },
 
-  "battery": {
-    "format": "{capacity}%  ",
-    "format-charging": "  {capacity}%+",
-    "format-full": "  full",
-    "tooltip": false
-  },
-  "tray": {
-    "spacing": 6,
-    "icon-size": 12
-  },
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "sort-by-number": true
-  },
+    "network": {
+        "format-wifi": "󰖩",
+        "format-ethernet": "{bandwidthDownBytes}",
+        "format-disconnected": "󰖪",
+        "interval": 2,
+        "tooltip": true,
+        "on-click": "kitty -e nmtui",
+        "tooltip-format": "{essid} ({signalStrength}%) {ipaddr}\n   {bandwidthUpBytes} |    {bandwidthDownBytes}"
+    },
 
-  "network": {
-    "format-wifi": "󰖩",
-    "format-ethernet": "{bandwidthDownBytes}",
-    "format-disconnected": "offline",
-    "interval": 2,
-    "tooltip": true,
-    "tooltip-format": "{essid} ({signalStrength}%) {ipaddr}\n   {bandwidthUpBytes} |    {bandwidthDownBytes}"
-  },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": "  muted",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
 
-  "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": "  muted",
-    "on-click": "pavucontrol",
-    "tooltip": false
-  },
-
-  "clock": {
-    "format": "{:%H:%M:%S}",
-    "interval": 1,
-    "tooltip": false
-  }
+    "clock": {
+        "format": "{:%H:%M:%S}",
+        "interval": 1,
+        "on-click": "true"
+    }
 }
