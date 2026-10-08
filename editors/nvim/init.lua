@@ -25,7 +25,7 @@ vim.g.netrw_banner = 0
 vim.g.netrw_localcopydircmd = "cp -r"
 vim.g.netrw_liststyle = 3
 vim.opt.termguicolors = true
-vim.cmd("colorscheme catppuccin-latte")
+vim.cmd("colorscheme zen")
 
 require('telescope').setup {
     pickers = {
