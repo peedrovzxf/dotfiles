@@ -18,4 +18,5 @@
     ~/.config/ranger: os/linux/ranger
     ~/.config/kitty: os/linux/kitty
     ~/.config/Thunar: os/linux/thunar
+    ~/.config/wlogout: os/linux/wlogout
     ~/.tmux.conf: os/linux/tmux/tmux.conf

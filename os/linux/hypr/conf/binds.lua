@@ -28,7 +28,7 @@ hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("swaylock"))
 
 -- Lock the screen
 
-hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("wlogout --protocol layer-shell"))
+hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("wlogout --protocol layer-shell -b 5 -T 400 -B 400 -L 200 -R 200 -c 20"))
 
 -- show the logout window
 
